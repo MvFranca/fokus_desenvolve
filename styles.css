@@ -308,11 +308,11 @@ h1, h2, h3, h4, h5, h6 {
         gap: 2rem;
     }
 
-    .app__form-footer__button {
-        display: none;
-    }
 }
 
+.app__form-footer__button--delete{
+    display: none !important;
+}
 
 .hidden {
     display: none;
@@ -353,6 +353,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 150%;
     white-space: nowrap;
     font-family: Montserrat;
+    width: 100%;
 }
 
 
@@ -512,6 +513,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 150%;
     gap: 0.8rem;
+}
+
+.app__form-footer__button img{
+    width: 1.5rem;
 }
 
 .app__form-footer__button--confirm {
