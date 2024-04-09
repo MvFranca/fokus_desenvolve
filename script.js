@@ -47,6 +47,9 @@ longoBt.addEventListener('click', () => {
     longoBt.classList.add('active')
 })
 
+
+
+
 function alterarContexto(contexto) {
     mostrarTempo()
     botoes.forEach(function (contexto){
@@ -76,9 +79,15 @@ function alterarContexto(contexto) {
 }
 
 const contagemRegressiva = () => {
+    
     if(tempoDecorridoEmSegundos <= 0){
+
         audioTempoFinalizado.play()
         alert('Tempo finalizado!')
+
+
+
+
         zerar()
         return
     }
@@ -105,6 +114,13 @@ function zerar() {
     iniciarOuPausarBt.textContent = "Começar"
     iniciarOuPausarBtIcone.setAttribute('src', `./imagens/play_arrow.png`)
     intervaloId = null
+
+    const focoAtivo = html.getAttribute('data-contexto') == 'foco'
+
+    if(focoAtivo) {
+        const evento = new CustomEvent('FocoFinalizado')
+        document.dispatchEvent(evento)
+    }
 }
 
 function mostrarTempo() {

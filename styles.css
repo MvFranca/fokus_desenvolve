@@ -6,7 +6,7 @@
     --lils: #B872FF;
     --linear-botes: linear-gradient(180deg, #B872FF 0%, #144480 100%);
     --azul-profundo: #01080E;
-    --fundo-card: rgba(255, 255, 255, 0.50);
+    --fundo-card: rgb(0 0 0 / 95%);
     --fundo-card-concludo: rgba(0, 244, 191, 0.40);
 }
 
@@ -35,7 +35,7 @@ html {
 
 body {
     min-height: 100vh;
-    background: url("/imagens/pattern.png");
+    background: url("./imagens/pattern.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -168,6 +168,8 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     background: #010B15;
+    border-top: 1px solid var(--color-secondary);
+    margin-top: 5rem;
 }
 
 .app__footer-text {
@@ -178,6 +180,10 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+}
+
+.app__footer-text a {
+    color: #FFF;
 }
 
 /* toggle */
@@ -194,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 3.2rem;
     position: relative;
     vertical-align: middle;
-    transition: background 0.25s;
+    transition: 0.25s;
 }
 
 .toggle-switch:before, .toggle-switch:after {
@@ -283,6 +289,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+
 /* Para Celulares */
 @media (max-width: 767px) {
     .app__section-banner-container {
@@ -302,6 +309,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+
 .hidden {
     display: none;
 }
@@ -314,11 +322,13 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
 }
 
+
 .app__section-task-content {
     width: 59rem;
     max-width: 90%;
     color: #FFF;
 }
+
 
 .app__section-active-task {
     display: flex;
@@ -330,6 +340,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 4rem;
 }
 
+
 .app__form-textarea,
 .app__form-textarea::placeholder {
     font-size: 2rem;
@@ -340,6 +351,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat;
 }
 
+
 .app__section-active-task-description {
     font-family: Montserrat;
     font-size: 1.8rem;
@@ -348,6 +360,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 150%;
 }
 
+
 .app__section-tasks-heading {
     font-size: 2.6rem;
     font-style: normal;
@@ -355,10 +368,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 120%;
 }
 
+
 .app__section-task-header {
     display: flex;
     justify-content: space-between;
 }
+
 
 .app_button-edit,
 .app_button-more {
@@ -370,6 +385,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+
 .app__section-active-task-label {
     font-family: Montserrat;
     font-size: 1.25rem;
@@ -378,10 +394,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 150%;
 }
 
+
 .app__section-task-list {
     margin-top: 2.4rem;
     margin-bottom: 4rem;
 }
+
 
 .app__section-task-list-item {
     display: flex;
@@ -390,10 +408,16 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2rem;
     border-radius: 0.8rem;
     background: var(--fundo-card);
+    border: .0938rem solid var(--lils);
     margin-bottom: 0.8rem;
     padding: 1.6rem;
     box-sizing: border-box;
     cursor: pointer;
+    transition: 0.2s all;
+}
+
+.app__section-task-list-item:hover{
+    background: rgb(0 0 0 / 90%);
 }
 
 .app__section-task-list-item-description {
@@ -403,27 +427,32 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
-    color: var(--azul-profundo);
+    color: var(--color-secondary);
     font-family: Montserrat;
 }
+
 
 .app__section-task-list-item-complete.app__section-task-list-item {
     background: var(--fundo-card-concludo);
     cursor: inherit;
 }
 
+
 .app__section-task-list-item-active.app__section-task-list-item {
-    border: 2px solid #FFF;
+    border-color: #FFF;
 }
+
 
 .app__section-task-list-item-complete .app__section-task-icon-status circle {
     fill: #00F4BF;
 }
 
+
 .app__form-add-task {
     padding: 1.6rem;
     border-radius: 0.8rem;
     background: var(--fundo-card);
+    border: 2px solid var(--lils);
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 600;
@@ -431,8 +460,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat;
 }
 
+
 .app__form-label {
-    color: var(--azul-profundo);
+    color: #fff;
     font-family: Unbounded;
     font-size: 2.6rem;
     font-style: normal;
@@ -442,12 +472,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 3.2rem;
 }
 
+
 .app__form-textarea {
     width: 100%;
     border-radius: 0.8rem;
     padding: 0.8rem;
-    background: #98A0A8;
+    outline: none;
 }
+
 
 .app__form-footer {
     display: flex;
@@ -461,6 +493,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-grow: 1;
 }
 
+
 .app__form-footer__button {
     border: none;
     cursor: pointer;
@@ -468,7 +501,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
     display: flex;
     align-items: center;
-    color: var(--azul-profundo);
+    color: var(--azul-secundery);
     font-family: Montserrat;
     font-size: 1.8rem;
     font-style: normal;
@@ -481,8 +514,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 3.2rem;
     padding: 0.8rem 2.4rem;
     color: #fff;
-    background: var(--azul-profundo);
+    background: var(--cor-secundery);
 }
+
 
 .app__button--add-task {
     border: none;
@@ -504,6 +538,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 150%;
 }
+
 
 .app_button-edit:disabled {
     color: #e6e6e6;
