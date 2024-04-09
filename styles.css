@@ -307,6 +307,10 @@ h1, h2, h3, h4, h5, h6 {
     .app__section-active-task {
         gap: 2rem;
     }
+
+    .app__form-footer__button {
+        display: none;
+    }
 }
 
 
